@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+<div class="container mx-auto">
+  <h1><%= @student.fullname %></h1>
+  <ul>
+    <li><strong>Codigo:</strong> <%= @student.document %>
+    <li><strong>Documento:</strong> <%= @student.document %>
+    <li><strong>Foto:</strong> <%= @student.foto %>
+  </ul>
+    
+  <%= button_to "Eliminar", @student, method: :delete, class: 'btn btn-outline-danger' %>
+  <div>
+    <%= link_to "Editar", edit_student_path(@student) %> |
+    <%= link_to "Volver", students_path %>
+  </div>
+</div>

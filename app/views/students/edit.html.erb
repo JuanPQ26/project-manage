@@ -1,0 +1,11 @@
+<div class="container mx-auto">
+  <h1>Editar Estudiante</h1>
+  <div>
+    <%= render "form", student: @student %>
+  </div>
+
+  <div>
+    <%= link_to "Ver", @student %> |
+    <%= link_to "Volver", students_path %>
+  </div>
+</div>

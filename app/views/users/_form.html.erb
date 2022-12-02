@@ -1,0 +1,47 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <div>
+      <%= form.label :username, "Usuario", style: "display: block" %>
+      <%= form.text_field :username, { class: "form-control", placeholder: "Ingresa tu usuario" } %>
+    </div>
+  </div>
+  <div class="mb-3">
+    <div>
+      <%= form.label :fullname, "Nombre", style: "display: block" %>
+      <%= form.text_field :fullname, { class: "form-control", placeholder: "Ingresa tu nombre completo" } %>
+    </div>
+  </div>
+  <div class="mb-3">
+    <div>
+      <%= form.label :profile, "Perfil", style: "display: block" %>
+      <%= form.text_field :profile, { class: "form-control", placeholder: "Escoge tu perfil" } %>
+    </div>
+  </div>
+  <div class="mb-3">
+    <div>
+      <%= form.label :email, "Correo electronico", style: "display: block" %>
+      <%= form.text_field :email, { class: "form-control", placeholder: "Ingresa tu correo electronico" } %>
+    </div>
+  </div>
+  <div class="mb-3">
+    <div>
+      <%= form.label :active, "Esta activo?", style: "display: block" %>
+      <%= form.check_box :active %>
+    </div>
+  </div>
+  <div>
+    <%= form.submit 'Guardar', :class => "btn btn-primary" %>
+  </div>
+<% end %>

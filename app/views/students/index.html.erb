@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+<div class="container mx-auto">
+  <h1>Estudiantes</h1>
+  <%= link_to "Nuevo Estudiante", new_student_path %>
+  
+  <table id="students" class="table">
+    <thead>
+      <tr>
+        <th scope="col">Tipo Documento</th>
+        <th scope="col">Documento</th>
+        <th scope="col">Codigo</th>
+        <th scope="col">Nombre Completo</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @students.each do |student| %>
+        <%= render student %>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

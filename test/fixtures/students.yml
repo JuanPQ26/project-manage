@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  typedocument: MyString
+  document: MyString
+  code: MyString
+  fullname: MyString
+  foto: MyString
+  active: false
+
+two:
+  typedocument: MyString
+  document: MyString
+  code: MyString
+  fullname: MyString
+  foto: MyString
+  active: false

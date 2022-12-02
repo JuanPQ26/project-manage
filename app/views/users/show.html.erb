@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container mx-auto">
+  <h1><%= @user.fullname %></h1>
+
+  <ul>
+    <li><strong>Perfil:</strong> <%= @user.profile %></li>
+    <li><strong>Correo Electronico: </strong><%= @user.email %></li>
+  </ul>
+
+  <%= button_to "Eliminar", @user, method: :delete, class: 'btn btn-outline-danger' %>
+  
+  <div>
+    <%= link_to "Editar", edit_user_path(@user) %> |
+    <%= link_to "Atras", users_path %>
+  </div>
+</div>
